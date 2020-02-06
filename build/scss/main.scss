@@ -1,0 +1,45 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/css/main.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+
+// Import Base
+// This includes all variables and modules
+@import "partials/base";
+
+// Partials
+// This is where we bring in the meat of our CSS
+@import "partials/utilities";
+@import "partials/header";
+@import "partials/content";
+@import "partials/footer";
+
+@import "partials/home";
+@import "partials/product-home";
+@import "partials/curriculum-units";
+@import "partials/resources";
+@import "partials/research";
+@import "partials/news";
+@import "partials/workshops";
+@import "partials/newsletter";
+@import "partials/webforms";
+@import "partials/blog";
+@import "partials/productheader";
+@import "partials/resourcesidebar";
+@import "partials/calendar";
+
+// NEW EiE STYLES
+@import "partials/type";
+@import "partials/grid-extras";
+@import "partials/strong-message-area";
+@import "partials/product-card";
+@import "partials/resources-block";
+@import "partials/checkerboard";
+@import "partials/hero";
+
+@import "partials/animate";
+
+// Vendor
+// This is where we can bring in third-party stylesheets if needed

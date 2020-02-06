@@ -1,0 +1,18 @@
+/* table style column align */
+.views-align-left {
+  text-align: left; }
+
+.views-align-right {
+  text-align: right; }
+
+.views-align-center {
+  text-align: center; }
+
+/* Remove the border on tbody that system puts in */
+.views-view-grid tbody {
+  border-top: none; }
+
+.view .progress-disabled {
+  float: none; }
+
+/*# sourceMappingURL=views.css.map */

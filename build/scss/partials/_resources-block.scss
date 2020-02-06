@@ -1,0 +1,18 @@
+/*
+----------------
+RESOURCES BLOCK
+----------------
+*/
+.section--reasources-block__title-column {
+	padding-left: 0;
+}
+.section--reasources-block {
+	h2 {
+		margin-top: 0;
+	}
+	.columns:not(.row) {
+		@media(max-width: 667px) {
+			padding: 0;
+		}
+	}
+}

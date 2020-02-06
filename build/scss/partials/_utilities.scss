@@ -1,0 +1,221 @@
+// This is a non-responsive site, so some adjustments are needed here
+
+.admin-tabs {
+  position: relative;
+  z-index: 3;
+}
+
+// Container
+.container {
+  @include container;
+}
+
+// Clearfix
+.clearfix {
+  @include clearfix;
+}
+
+.row {
+  max-width: 960px;
+  width: 100%;
+}
+.container > .row {
+  position: relative;
+  left: -10px;
+}
+
+// Buttons
+.btn, %btn, #sliding-popup .eu-cookie-compliance-secondary-button {
+  padding: emCalc(12) emCalc(20);
+  background: #fff;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  text-transform: uppercase;
+  font-family: $museo-sans;
+  transition: color .6s ease, background .6s ease;
+  position: relative;
+  display: inline-block;
+  &:before {
+	  content: "";
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border: 5px solid #fff;
+    opacity: 0;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    transition: box-shadow .7s ease-in;
+  }
+  &:after {
+    transition: opacity .7s ease-in;
+    opacity: 0;
+    content: "";
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border: 1px solid $primary-color;
+    background: transparent;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+  }
+  &:hover {
+    text-decoration: none;
+    background: $primary-color;
+    color: #fff;
+    &:after,
+    &:before {
+      opacity: 1;
+    }
+    &:before {
+			box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// whole cards are links and sometimes have buttons
+// we want the button to be active
+%btn-active-state {
+  text-decoration: none;
+  background: $primary-color;
+  color: #fff;
+  &:after,
+  &:before {
+    opacity: 1;
+  }
+  &:before {
+		box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.btn-container a {
+  @extend %btn;
+}
+
+// Alerts
+.messages {
+
+  .status {
+    @include alert-base;
+    @include alert-style($bg: #dff0d8);
+    color: #468847;
+  }
+  .warning {
+    @include alert-base;
+    @include alert-style($bg: #fcf8e3);
+    color: #c09853;
+  }
+  .error {
+    @include alert-base;
+    @include alert-style($bg: #f2dede);
+    color: #b94a48;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .close {
+    @include alert-close;
+  }
+}
+
+.admin-tabs {
+  .tabs {
+    @include button-group-container;
+    border-bottom: 2px solid darken($light-gray, 10%);
+    margin-bottom: 20px;
+
+    li {
+      @include button-group-style($float:left);
+      margin-left: 10px;
+      margin-bottom: 0;
+    }
+    li a {
+      @include button($bg:$light-gray);
+      @include museo-sans;
+      color: $text-color;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: normal;
+      display: block;
+
+      &:hover {
+        background-color: lighten($light-gray, 4%);
+        color: $lighter-gray;
+      }
+    }
+  }
+}
+
+.collapsable {
+  @include collapsable;
+}
+
+.more-link {
+  @include more-link;
+}
+
+// Image Alignment
+.img-align-left {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.img-align-right {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.horizontal-shadow-line {
+  @include shadow-line();
+}
+
+.horizontal-shadow-line-top {
+  @include shadow-line($shadow-position: top);
+}
+
+// Sharethis
+.block-sharethis {
+  @include sharethis;
+}
+
+// SECTION BLOCKS
+.section--global-spacing {
+  margin-bottom: 60px;
+  @media(min-width: 668px) {
+    margin-bottom: 100px;
+  }
+}
+
+.section--global-spacing.mobile-block-stack {
+  margin-bottom: 40px;
+  @media(min-width: 668px) {
+    margin-bottom: 100px;
+  }
+}
+
+.section--global-padding {
+  padding: 60px 0;
+  background: $light-gray;
+  @media(max-width: 667px) {
+	  padding: 30px 0;
+  }
+}
+
+// VIDEO
+.media-vimeo-video {
+  position: relative;
+  width: 100% !important; //override iframe
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: 0 auto rem-calc(45) auto;
+  iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Blog Home
+   ========================================================================== */
+   #block-eie-hubspot-eie-hubspot-blog-post-small-list{
+      position: relative;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 50%;
+      float: left;
+      margin: 2em 0 3em;
+      h3{
+        font-family: "museo-sans-rounded", "myriad-pro", Arial, sans-serif;
+        font-style: normal;
+        margin-top: 0.2em;
+        margin-bottom: 0.5em;
+        text-rendering: optimizeLegibility;
+        margin-top: 0;
+      }
+        .blog-top{
+          margin-bottom: .5em;
+          }
+         .post-title{
+              margin-bottom: 8px;
+            a{
+              display: block;
+              line-height: 1.2;
+              font-family: "museo-sans-rounded", "myriad-pro", Arial, sans-serif;
+              font-size: 1.1875em;              
+              font-weight: 500;
+            }
+          }
+          .post-credit{
+            line-height: 1.4;  
+            margin-bottom: 0.5em;
+            color: #959595;          
+            font-family: Arial, sans-serif;
+          }
+        .post-content{
+          line-height: 1.4;  
+          margin-bottom: 0.9em;
+          font-family: Arial, sans-serif;
+          font-size: 15px;
+        }
+        .view-all {
+          color: $anchor-font-color;
+          text-decoration: none;
+          line-height: inherit;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;          
+        }
+   }
+
+
+
+/* ==========================================================================
+   Blog Page
+   ========================================================================== */
+
+.blog-listing-item {
+  + .blog-listing-item {
+    margin-top: 1.5em;
+  }
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #ccc;
+  h3 {
+    @include subheader;
+    line-height: 1.2;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ==========================================================================
+   Blog Post
+   ========================================================================== */
+
+.node-type-blog {
+  .content-top-region {
+    margin-bottom: 0;
+  }
+  .page-title {
+    margin-bottom: 0;
+  }
+}
+
+.node-blog {
+  // Photo
+  .field-name-field-blog-photo {
+    margin-bottom: 8px;
+  }
+  // Photo Credit
+  .field-name-field-blog-photo-credit {
+    color: $lighter-gray;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  // Photo Caption
+  .field-name-field-blog-photo-caption {
+    color: $lighter-gray;
+    font-size: 14px;
+  }
+  .field-name-field-blog-publication-date {
+    margin: 15px 0 10px;
+    font-weight: bold;
+  }
+}

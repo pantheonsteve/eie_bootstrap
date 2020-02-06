@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Workshops – Detail Page
+   ========================================================================== */
+
+.node-workshop {
+  padding-bottom: 2em;
+}
+
+.workshop-info-box {
+  @include clearfix;
+  background-color: $white;
+  border: 1px solid #ccc;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.workshop-info-box--header {
+  @include h6;
+  background-color: #f4f5f9;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  color: $eie-blue;
+}
+
+.workshop-info-box--content {
+  @include grid-row;
+  padding-bottom: 10px;
+}
+
+.workshop-info-box--field {
+  @include grid-column(6);
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .field-label {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .field-content {
+    font-weight: bold;
+  }
+}
+
+.workshop--pilot-workshop {
+  margin-bottom: 1em;
+}
+
+.workshop--register-link {
+  .field-item a {
+    @extend %btn;
+  }
+}
+
+/* ==========================================================================
+   Workshops – Similar Workshops Block
+   ========================================================================== */
+
+.similar-workshops-block {
+  
+  .views-row {
+    margin-bottom: 1em;
+  }
+
+  .views-field-title {
+    @include h6;
+    line-height: 1.2;
+    margin-bottom: 0.25em;
+  }
+
+  .views-field-field-workshop-date {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================================
+   Workshops – Browse All Workshops Block
+   ========================================================================== */
+
+.browse-all-workshops-block {
+
+  .container-inline-date .form-item, 
+  .container-inline-date .form-item input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .container-inline-date .form-item select, 
+  .container-inline-date .form-item option {
+    margin-right: 0;
+  }
+
+  #edit-date-value {
+    @include grid-row($behavior:nest);
+    float: none;
+    
+    .form-item {
+      @include grid-column(6);
+    }
+  }
+}
+
+/* ==========================================================================
+   Workshops & Professional Development Blocks
+   ========================================================================== */
+
+.workshop-professional-block {
+  position: relative;
+  width: 220px;
+  float: left;
+  margin-bottom: 2em;
+  
+  & + & {
+    margin-left: 20px;
+  }
+
+  h3 {
+    @include h5;
+    color: $text-color;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h3 + p {
+    margin-top: 5px;
+  }
+}
+
+
+/* ==========================================================================
+   Workshops Listing Block & Upcoming Workshops Listing Block
+   ========================================================================== */
+
+.workshops-listing-block,
+.upcoming-workshops-block {
+  @include clearfix;
+  clear: both;
+
+  > h3 {
+    @include ribbon($background-color: $eie-blue, $font-size: 18px);
+    margin-bottom: 1.5em;
+  }
+
+  .views-row {
+    padding-bottom: 2em;
+    border-bottom: 1px solid #ccc;
+    
+    + .views-row {
+      padding-top: 2em;
+    }
+  }
+  
+  .views-field {
+    line-height: 1.4;
+  }
+
+  .views-field-title {
+    @include h4;
+    @include subheader;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .views-field-field-workshop-date {
+    font-weight: bold;
+  }
+
+  .views-field-field-workshop-cost {
+    .views-label,
+    .field-content {
+      display: inline;
+    }
+  }
+
+  .views-field-field-workshop-units {
+    .views-label,
+    .field-content {
+      display: inline;
+    }
+    .field-content + .field-content {
+      &:before {
+        content: ', ';
+      }
+    }
+  }
+
+  .views-field-body {
+    margin: 1em 0;
+  }
+
+  .views-field-field-workshop-audience {
+    margin-bottom: 1em;
+
+    .views-label {
+      display: inline;
+      font-weight: bold;
+    }
+    .field-content {
+      display: inline;
+    }
+  }
+  
+  .views-field-field-workshop-pilot-workshop {
+    margin-bottom: 1em;
+  }
+
+  .views-field-field-workshop-register-link {
+    .field-content a {
+      @extend %btn;
+    }
+  }
+}

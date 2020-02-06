@@ -1,0 +1,642 @@
+/* ==========================================================================
+   Product Homepage – Header Slider
+   ========================================================================== */
+
+.header-slider {
+  position: relative;
+  height: 380px;
+}
+
+.header-slider--no-pager {
+  border-bottom: 1px solid $light-gray;
+}
+
+.header-slider--main {
+  height: 100%;
+
+  & .views-slideshow-cycle-main-frame {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.header-slider--slide-item {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.header-slider--slide-item--container {
+  position: relative;
+  height: 100%;
+  @include container;
+}
+
+.header-slider--slide-item--fields-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header-slider--slide-item--fields-content {
+  position: absolute;
+  width: 100%;
+  bottom: 44px;
+  background-color: $white;
+  padding: 20px;
+  min-height: 96px;
+
+  // When only one slide is available, lock the slide content to the bottom
+  //.header-slider--no-pager & {
+    //bottom: 0;
+  //}
+  // COMMENTED OUT BECAUSE ONE SLIDE STILL USES THE BOTTOM PAGER
+
+  .views-field-field-product-slide-title {
+    @include h3;
+    margin: 0;
+    color: $eie-blue;
+    line-height: 1;
+    margin-right: 5px;
+    // Force this and innder div to display like inline text
+    &, & .field-content { display: inline }
+  }
+
+  & .views-field-field-product-slide-text {
+    @include georgia;
+    font-size: 16px;
+    line-height: 1.6;
+    // Force this and innder div to display like inline text
+    &, & .field-content { display: inline }
+  }
+}
+
+.header-slider--controls-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  & .views-slideshow-controls-bottom {
+    position: relative;
+    z-index: 6;
+    height: 44px;
+    @include container;
+  }
+
+  & .views-slideshow-pager-fields {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  // Pager items
+  & .views-slideshow-pager-field-item {
+    display: table-cell;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    vertical-align: middle;
+    height: 44px;
+    color: $white;
+    cursor: pointer;
+    @include museo-sans;
+
+    // Adjust borders on first/last items
+    &:first-child {
+      border-left-color: transparent;
+    }
+    &:last-child {
+      border-right-color: transparent;
+    }
+
+    // Nested table displays were needed here to vertically center
+    // and also to fix the position of the active item triangle shape
+    & > div {
+      display: table;
+      table-layout: fixed;
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    & > div > div {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    // Pager item active triangle tip
+    &.active > div:before {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -10px;
+    }
+  }
+
+  // Pager Colors - Default
+  & .views-slideshow-pager-field-item {
+    border-left: 1px solid darken($eie-yellow, 5%);
+    border-right: 1px solid lighten($eie-yellow, 2.5%);
+    background-color: $eie-yellow;
+    @include background-image(
+      linear-gradient(
+        // color at top
+        lighten($eie-yellow, 0%),
+        // color half way
+        $eie-yellow,
+        // color at bottom
+        darken($eie-yellow, 8%)
+        )
+    );
+
+    // Pager item active / hover
+    &.active,
+    &:hover {
+      background: lighten($eie-yellow, 0%);
+    }
+
+    // Pager item active triangle tip
+    &.active > div:before {
+      @include css-triangle(10px, lighten($eie-yellow, 0%), bottom);
+    }
+  }
+}
+
+/* ==========================================================================
+   Product Homepage – Content Top Region
+   ========================================================================== */
+
+.product-home .breadcrumbs {
+  display: none;
+}
+
+.product-home .content-top-region {
+  margin-bottom: 0;
+}
+
+.product-home .main-container.full-width .messages {
+  margin-top: 20px;
+}
+
+
+/* ==========================================================================
+   Product Homepage – Content Region
+   ========================================================================== */
+
+
+// Make the content region a row
+// Blocks within this region will require column classes
+.product-home .content-region {
+  @include grid-row();
+}
+
+// Our Curriculum Products
+#block-boxes-eie-home-products-intro-block {
+  @include grid-column(12);
+  margin-top: 1em;
+
+  .boxes-box-content {
+    @include h3;
+    color: $text-color;
+  }
+}
+
+// Curriculum Product Boxes
+.product-home .curriculum-product-box {
+  margin-bottom: 1em;
+
+  > h3 a {
+    @include ribbon($background-color: $eie-blue);
+  }
+
+  .taxonomy-terms-row {
+    @include grid-row($behavior:nest);
+  }
+
+  .taxonomy-term {
+    @include grid-column(3);
+    position: relative;
+  }
+
+  .term-icon {
+    margin: 20px 0 12px;
+
+    .field-items {
+      @include red-circle-icon($circle-size:49px);
+
+      > div > img {
+        max-width: 27px;
+      }
+    }
+  }
+
+  .term-name {
+    @include museo-sans;
+    font-size: 13px;
+    font-weight: bold;
+    height: 15px;
+    margin-bottom: 1em;
+
+    span {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  .product-featured-image {
+    margin-bottom: 1em;
+  }
+
+  .boxes-box {
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// News and Workshops blocks
+#block-views-news-recent-news-block,
+#block-views-52177c59fa1b7e653f11019cc1bd17e1 {
+  @include grid-column(6);
+  margin: 2em 0 3em;
+
+  > h3 {
+    margin-top: 0;
+  }
+
+  .views-row {
+    margin-bottom: 1.2em;
+  }
+
+  .views-field-title {
+    @include h5;
+    @include subheader;
+
+    & a {
+      display: block;
+      line-height: 1.2;
+    }
+  }
+
+  .views-field-body {
+    .field-content,
+    & .field-content p {
+      line-height: 1.4;
+    }
+  }
+
+  .date-display-single {
+    display: block;
+    color: #959595;
+    margin-bottom: 5px;
+  }
+}
+
+#block-views-news-recent-news-block {
+  clear: left;
+}
+
+
+/* ==========================================================================
+   Product Homepage – Content Bottom Region
+   ========================================================================== */
+
+// Make the content-bottom region a row
+// Blocks within this region will require column classes
+.product-home .content-bottom-region {
+  background-color: $white;
+  border-top: 1px solid $light-gray;
+
+  .region-content-bottom {
+    @include grid-row();
+  }
+}
+
+#block-boxes-eie-newsletter-signup-form {
+  float: left;
+  width: 45%;
+}
+
+#block-boxes-ea-newsletter-signup-form {
+  float: right;
+  width: 45%;
+}
+
+// Newsletter link, main homepage
+#block-boxes-project-newsletter-link {
+
+  .newsletter-ribbon {
+    @include ribbon($background-color: #aaa, $font-size: 18px);
+    overflow: visible;
+    padding-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    > span {
+      text-transform: uppercase;
+    }
+
+    &:after {
+      content: url('../images/newsletter-yellow-icon.png');
+      position: absolute;
+      background-color: $white;
+      left: 15px;
+      top: -18px;
+      padding: 5px;
+      width: 65px;
+      height: 46px;
+      border-radius: 5px;
+    }
+  }
+}
+
+// Newsletter link, other product homepages
+#block-boxes-product-newsletter-link {
+
+  .newsletter-ribbon {
+    @include ribbon($background-color: $eie-red, $font-size: 18px);
+    overflow: visible;
+    padding-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    > span {
+      text-transform: uppercase;
+    }
+
+    &:after {
+      content: url('../images/newsletter-blue-icon.png');
+      position: absolute;
+      background-color: $white;
+      left: 15px;
+      top: -18px;
+      padding: 5px;
+      width: 65px;
+      height: 46px;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   Product Homepage – Real Story
+   ========================================================================== */
+
+// Let's set the grid layout first
+
+.real-story--row {
+  @include grid-row($behavior:nest);
+}
+
+.real-story--statistic {
+  @include grid-column(3);
+}
+
+.real-story--photo {
+  @include grid-column($columns:3, $push:1);
+}
+
+.real-story--body {
+  @include grid-column($columns:8, $push:1);
+}
+
+
+// Now let's style it up
+.real-story {
+  margin: 2em 0 3em;
+}
+
+.real-story--photo {
+  padding-top: 8px;
+
+  &:before {
+    content: '\201C';
+    position: absolute;
+    left: -70px;
+    top: 0;
+    font-family: $georgia;
+    color: $pale-blue;
+    font-size: 130px;
+    font-weight: bold;
+    line-height: 120px;
+  }
+}
+
+.real-story--statistic {
+
+  &:after {
+    content: '\201D';
+    position: absolute;
+    right: -80px;
+    top: 0;
+    font-family: $georgia;
+    color: $pale-blue;
+    font-size: 130px;
+    font-weight: bold;
+    line-height: 120px;
+  }
+}
+
+.real-story--statistic--value {
+  @include museo-sans;
+  font-size: 100px;
+  font-weight: 700;
+  color: $eie-red;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.real-story--statistic--text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.real-story--body--quote {
+  @include georgia;
+  font-size: 24px;
+  color: $text-color;
+  line-height: 1.4;
+
+  p {
+    line-height: 1.4;
+    margin-bottom: 0;
+
+    &:last-child:after {
+      content: '\201D';
+    }
+  }
+}
+
+.real-story--body--cite {
+  @include georgia;
+  font-size: 18px;
+  margin: 1em 0;
+  @include clearfix;
+}
+
+.real-story--body--person,
+.real-story--body--source {
+  float: left;
+
+  div {
+    display: inline;
+  }
+}
+
+
+/* ==========================================================================
+   Product Homepage – What do you teach?
+   ========================================================================== */
+
+#boxes-box-home_units_intro {
+  margin-top: 1em;
+
+  p {
+    @include museo-sans;
+    font-size: 22px;
+    font-weight: 500;
+    color: $text-color;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $eie-red;
+  }
+
+  .links {
+    margin-bottom: 0;
+  }
+}
+
+.curriculum-unit-jump-menu {
+  margin: 1.5em 0 2em;
+
+  .term-icon .field-items {
+    @include red-circle-icon($circle-size:85px);
+  }
+
+  .term-name {
+    @include museo-sans;
+    color: $eie-blue;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0 10px;
+  }
+
+  .view-header {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  form {
+    margin-bottom: 0;
+
+    .container-inline {
+      @include grid-row;
+      margin-top: 1em;
+      padding-left: 30px;
+    }
+
+    .form-item,
+    .form-submit {
+      display: block;
+    }
+
+    .form-item-jump {
+      @include grid-column(8);
+    }
+
+    .form-select {
+      margin-top: 3px;
+      margin-bottom: 0;
+    }
+
+    .form-submit {
+      @include btn;
+      @include grid-column(2);
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* ==========================================================================
+   Product Homepage – About the Curriculum & Featured Unit blocks
+   ========================================================================== */
+
+.about-the-curriculum-block,
+.featured-curriculum-unit-block {
+  @include grid-column(6);
+  margin: 2em 0;
+
+  > h3 a,
+  .content > h3 a {
+    @include ribbon();
+  }
+
+  .boxes-box,
+  .view-content {
+    margin-top: 20px;
+  }
+
+  .content img {
+    border: 1px solid $light-gray;
+  }
+}
+
+.about-the-curriculum-block {
+  .content img {
+    max-width: 220px;
+    height: auto !important;
+  }
+}
+
+.featured-curriculum-unit {
+  .views-row {
+    @include clearfix;
+  }
+}
+
+.featured-curriculum-unit--image {
+  width: 220px;
+  float: left;
+}
+
+.featured-curriculum-unit--text {
+  width: 220px;
+  float: right;
+  font-size: 1em;
+
+  .subtitle {
+    @include h5;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .title a {
+    @include h4;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-top: 0;
+    color: $eie-blue;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .body p {
+    margin-bottom: 1em;
+  }
+}

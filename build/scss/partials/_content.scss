@@ -1,0 +1,600 @@
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.main-container {
+  padding: 20px 0;
+}
+// Full width page content adjustments
+.main-container.full-width {
+  @include clearfix;
+  
+  padding: 0;
+
+  .content-top-region {
+    margin-bottom: 0;
+  }
+  
+  .messages {
+    margin-top: 20px;
+  }
+
+  .admin-tabs {
+    @include container;
+    position: relative;
+    
+    .tabs {
+      margin: 20px 0 0;
+    }
+  }
+}
+
+.content-top-region {
+  margin-bottom: 20px;
+}
+
+.content-main > :first-child {
+  margin-top: 0;
+}
+
+.breadcrumbs {
+  @include crumb-container;
+  line-height: 1;
+  margin: 0;
+
+  li {
+    @include crumbs;
+    
+    &:before {
+      top: 0;
+    }
+  }
+}
+
+.intro-text p,
+p.intro-text {
+  @include h3;
+  @include subheader;
+  font-family: $body-font-family;
+  font-size: 26px;
+  font-style: italic;
+  color: #929292;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  @include museo-sans;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAYAAAAL4VbbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA7NpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMTgwODNFQjgzQzYyQkQ3QzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkMzREQ2QzkyMjFBMTFFMzlGMTlFQjU1NTBGNzcxMjIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkMzREQ2QzgyMjFBMTFFMzlGMTlFQjU1NTBGNzcxMjIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDQwMzUxNTQwRDIwNjgxMThCNzg5REI0MEQwNkY3QjkiIHN0UmVmOmRvY3VtZW50SUQ9InV1aWQ6QzdBRUZEMkFCNkVDRTExMTgwMDc4NTg2OERDNDI3ODEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6RunoDAAAAxElEQVR42mL8cymJi4GBoQmINYF4OhBvYcABmIC4BoiLgdgLiDcAcQI+xYpIfGYgnoNLA0hxPxB/J0YDSPEpIA4gRgMTlN6FR0MiumJkDd/QNMyGaWBCcxZIQyAWDaAgFWXC4ukLQPwMTYwdiLnRFYsD8X4gVkETXwLED5jQFO4DYi00hathocJEhMJIIP4LUyxMjEKY4nosClehK4QpFsCiMApdIUxxCxDfBeJ/QDwLl0IQYAHiW9Cg4gDiHwx4AECAAQAkcC1WtQBEEgAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-position: 0 26px;
+  border-left: 0;
+  border-top: 1px solid $eie-yellow;
+  border-bottom: 1px solid $eie-yellow;
+  font-size: 22px;
+  line-height: 1.2;
+
+    cite {
+      margin-top: 5px;
+      text-align: right;
+    }
+}
+
+.content-inner .node .content,
+.paragraphs-items .section--text {
+  ul, ol {
+    margin-left: 2.25em;
+  }
+}
+
+.paragraphs-items {
+  ul, ol {
+    margin-left: 1.25em;
+  }
+}
+
+/* ==========================================================================
+   Content Sidebar
+   ========================================================================== */
+
+.content-sidebar {
+
+  h3 {
+    margin: 0 0 5px;
+  }
+}
+
+.sidebar-box {
+  background-color: $white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  form {
+    margin-bottom: 0;
+  }
+  > h3 {
+    @include subheader;
+    color: $eie-blue;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
+    border-top: 0;
+    line-height: 1.2;
+  }
+  .views-submit-button, > h3 {
+    @media(max-width: 668px) { 
+      text-align: center;
+    }
+  }
+  .form-submit {
+    @extend %btn;
+  }
+}
+
+
+/* ==========================================================================
+   Sidebar Nav
+   ========================================================================== */
+
+// Design Spec Version
+
+// .sidebar-nav {
+//   @include side-nav;
+//   @include museo-sans;
+  
+//   > li {
+//     font-weight: 700;
+//     padding: 4px 0;
+//     border-bottom: 1px solid #ccc;
+
+//     &:first-child {
+//       border-top: 1px solid #ccc;
+//     }
+//   }
+
+//   > li a {
+//     background-color: $light-gray;
+//     line-height: 1.2;
+//     padding: 10px;
+//   }
+
+//   > li.active a {
+//     background-color: $white;
+//   }
+// }
+
+// Proposed New Version
+.sidebar .block-menu-block {
+  @media(max-width: 667px) {
+    display: none;
+  }
+  > h3 {
+    display: none;
+  }
+}
+
+.sidebar {
+  .more-in-this-section {
+    width: 100%;
+    @media(min-width: 668px) {
+      display: none;
+    }
+    a {
+      padding: 14px 50px 13px;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: #fff;
+      background: $dark-gray;
+      display: block;
+      position: relative;
+      &:before {
+        transition: transform .4s ease;
+        content: "\f107";
+        font-family: "fontAwesome";
+        position: absolute;
+        height: 10px;
+        width: 20px;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 32px;
+        line-height: .4;
+      }
+    }
+    &.more-in-this-section--active a:before {
+      transform: rotate(180deg);
+    }
+  }
+  @media(max-width: 667px) {
+    margin-bottom: 30px;
+  }
+}
+
+.sidebar .menu-block-wrapper > .menu,
+#block-eie-core-eie-core-left-nav .content > .menu {
+  @include side-nav;
+  @include museo-sans;
+  
+  li {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: lighten($light-gray, 0%);
+    border-left: 5px solid darken($light-gray, 8%);
+
+    &:hover {
+      background-color: lighten($light-gray, 4%);
+      border-color: darken($light-gray, 8%);
+    }
+
+    &.active {
+      @include skin-border-color;
+    }
+  }
+
+  li a {
+    line-height: 1.2;
+    padding: 14px;
+    border: 1px solid transparent;
+    border-left: 0;
+  }
+
+  li.active a {
+    background-color: lighten($light-gray, 8%);
+    border-color: $light-gray;
+  }
+
+  li > .menu {
+    display: none;
+  }
+}
+
+
+/* ==========================================================================
+   Pager
+   ========================================================================== */
+
+.pager {
+  @include pagination;
+  @include museo-sans;
+  margin: 30px 0;
+  margin-left: -15px;
+
+  li {
+    height: auto;
+    width: 24px;
+    line-height: 24px;
+    background-color: $dark-gray;
+    color: $white;
+    text-align: center;
+    margin-left: 15px;
+  }
+
+  li {
+    &.pager-first,
+    &.pager-previous,
+    &.pager-next,
+    &.pager-last {
+      width: auto;
+      padding: 0 5px;
+    }
+  }
+  
+  li.pager-current {
+    @include skin-background-color;
+  }
+
+  li a {
+    display: block;
+    padding: 0;
+
+    &:hover {
+      background-color: lighten($dark-gray, 10%)
+    }
+  }
+
+  .ajax-progress {
+    @include throbber;
+  }
+}
+
+
+/* ==========================================================================
+   Taxonomies
+   ========================================================================== */
+
+.taxonomy-term.vocabulary-product {
+  @include museo-sans;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+  padding: 2px 0 2px 25px;
+
+  & div:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: $body-font-color;
+    border-radius: 3px;
+  }
+
+  & .product-eie {
+    color: $eie-red;
+
+    &:before {
+      background-color: $eie-red;
+    }
+  }
+  & .product-ec {
+    color: $eie-yellow;
+    
+    &:before {
+      background-color: $eie-yellow;
+    }
+  }
+  & .product-ea {
+    color: $eie-blue;
+    
+    &:before {
+      background-color: $eie-blue;
+    }
+  }
+  & .product-ee {
+    color: $eie-green;
+    
+    &:before {
+      background-color: $eie-green;
+    }
+  }
+}
+
+/* ==========================================================================
+   Sitemap
+   ========================================================================== */
+
+.sitemap-block {
+  margin-bottom: 2em;
+  border: 1px solid $light-gray;
+
+  > h3 {
+    @include h5;
+    margin: 0;
+    padding: 10px 15px;
+    background-color: $lighter-blue;
+    color: $text-color;
+    text-transform: uppercase;
+    
+    &:before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      background-color: $body-font-color;
+      border-radius: 3px;
+      margin-right: 0.5em;
+    }
+  }
+
+  &.eie h3:before { background-color: $eie-red; }
+  &.ec  h3:before { background-color: $eie-yellow; }
+  &.ea  h3:before { background-color: $eie-blue; }
+  &.ee  h3:before { background-color: $eie-green; }
+
+  .content {
+    background-color: $white;
+    padding: 10px 15px;
+  }
+
+  .menu-block-wrapper {
+    
+    li {
+      list-style-type: none;
+    }
+
+    > .menu {
+      margin-bottom: 0;
+
+      > li {
+        
+        &:not(:last-child) {
+          margin-bottom: 1em;
+        }
+
+        > a {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Other
+   ========================================================================== */
+
+.recaptchatable #recaptcha_response_field {
+  height: auto;
+}
+
+.recaptcha_input_area:before,
+.recaptcha_input_area:after {
+  content: " ";
+  display: table;
+}
+
+.recaptcha_input_area:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   TABLESAW
+   ========================================================================== */
+
+/*! Tablesaw - v2.0.2 - 2015-10-27 (Modified)
+* https://github.com/filamentgroup/tablesaw
+* Copyright (c) 2015 Filament Group; Licensed MIT */
+
+table.tablesaw {
+  empty-cells: show;
+  max-width: 100%;
+  width: 100%;
+}
+
+.tablesaw {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tablesaw-stack td .tablesaw-cell-label,
+.tablesaw-stack th .tablesaw-cell-label {
+  display: none;
+}
+
+/* Mobile first styles: Begin with the stacked presentation at narrow widths */
+
+@media(max-width: 667px) {
+  
+  table.tablesaw-stack {
+    border-width: 0;
+    
+    tbody, thead {
+      border-width: 0;
+    }
+    
+    thead {
+      display: none;
+    }
+    
+    tbody tr {
+      display: block;
+      margin-bottom: 20px;
+      border: solid 1px #ccc;
+      @include clearfix();
+    }
+    
+    tbody td {
+      border-width: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Table rows have a gray bottom stroke by default */
+
+  .tablesaw-stack tbody tr {
+    border-bottom: 1px solid #dfdfdf;
+  }
+  
+  /* Show the table cells as a block level element */
+
+  .tablesaw-stack td,
+  .tablesaw-stack th {
+    text-align: left;
+    display: block;
+  }
+
+  .tablesaw-stack tr {
+    clear: both;
+    display: table-row;
+  }
+
+  /* Make the label elements a percentage width */
+
+  .tablesaw-stack td .tablesaw-cell-label,
+  .tablesaw-stack th .tablesaw-cell-label {
+    display: block;
+    width: 100%;
+    display: inline-block;
+    font-weight: bold;
+    p {
+      font-weight: bold;
+    }
+  }
+
+  /* For grouped headers, have a different style to visually separate the levels by classing the first label in each col group */
+
+  .tablesaw-stack th .tablesaw-cell-label-top,
+  .tablesaw-stack td .tablesaw-cell-label-top {
+    display: block;
+    padding: .4em 0;
+    margin: .4em 0;
+  }
+
+  .tablesaw-cell-label {
+    display: block;
+  }
+
+  /* Avoid double strokes when stacked */
+
+  .tablesaw-stack tbody th.group {
+    margin-top: -1px;
+  }
+
+  /* Avoid double strokes when stacked */
+
+  .tablesaw-stack th.group b.tablesaw-cell-label {
+    display: none !important;
+  }
+}
+
+@media (max-width: 667px) {
+  .tablesaw-stack thead td,
+  .tablesaw-stack thead th {
+    display: none;
+  }
+
+  .tablesaw-stack tbody td,
+  .tablesaw-stack tbody th {
+    clear: left;
+    float: left;
+    width: 100%;
+  }
+
+  .tablesaw-cell-label {
+    vertical-align: top;
+  }
+
+  .tablesaw-cell-content {
+    max-width: 67%;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .tablesaw-stack td:empty,
+  .tablesaw-stack th:empty {
+    display: none;
+  }
+}
+
+/* Media query to show as a standard table at 560px (35em x 16px) or wider */
+
+@media (min-width: 668px) {
+  .tablesaw-stack tr {
+    display: table-row;
+  }
+
+  /* Show the table header rows */
+
+  .tablesaw-stack td,
+  .tablesaw-stack th,
+  .tablesaw-stack thead td,
+  .tablesaw-stack thead th {
+    display: table-cell;
+    margin: 0;
+  }
+
+  /* Hide the labels in each cell */
+
+  .tablesaw-stack td .tablesaw-cell-label,
+  .tablesaw-stack th .tablesaw-cell-label {
+    display: none !important;
+  }
+}

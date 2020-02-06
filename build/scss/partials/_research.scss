@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Research – Browse Research Box
+   ========================================================================== */
+
+.browse-research-box {
+  
+  #edit-date-wrapper .views-widget {
+    @include grid-row($behavior:nest);
+
+    .form-item {
+      margin-right: 0;
+    }
+  }
+
+  #edit-field-published-date-value-min-wrapper {
+    @include grid-column(5);
+  }
+
+  #edit-field-published-date-value-min-wrapper + div {
+    @include grid-column(2);
+  }
+
+  #edit-field-published-date-value-max-wrapper {
+    @include grid-column(5);
+  }
+}
+
+
+/* ==========================================================================
+   Research – Listing Block
+   ========================================================================== */
+
+.research-listing-block {
+  
+  .views-row {
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .views-row + .views-row {
+    padding-top: 1.5em;
+  }
+
+  .views-field-title {
+    @include h4;
+    @include subheader;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .views-field-field-research-description {
+    line-height: 1.4;
+  }
+
+  .views-field-field-research-file {
+    margin-top: 1em;
+  }
+
+}
