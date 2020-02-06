@@ -1,6 +1,7 @@
 name = EIE Bootstrap Theme
 description = The EIE theme, rebuilt from the ground up with Bootstrap.
 core = 7.x
+screenshot = screenshot.png
 
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/main.css
