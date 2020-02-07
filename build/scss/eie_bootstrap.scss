@@ -1,37 +1,18 @@
-@import "alert";
-@import "badge";
-@import "breadcrumb";
-@import "button-group";
-@import "buttons";
-@import "card";
-@import "carousel";
-@import "close";
-@import "code";
-@import "custom-forms";
-@import "dropdown";
-@import "forms";
-@import "functions";
-@import "grid";
-@import "images";
-@import "input-group";
-@import "jumbotron";
-@import "list-group";
-@import "media";
-@import "mixins";
-@import "modal";
-@import "nav";
-@import "navbar";
-@import "pagination";
-@import "popover";
-@import "print";
-@import "progress";
-@import "reboot";
-@import "root";
-@import "spinners";
-@import "tables";
-@import "toasts";
-@import "tooltip";
-@import "transitions";
-@import "type";
-@import "utilities";
+// Bootstrap 4
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+
+// Custom Bootstrap Variables
+@import "vars";
 @import "variables";
+
+// Custom Components
+@import "field_collection.theme";
+@import "normalize";
+@import "system.theme";
+@import "views";
+@import "../partials/type";
+@import "../partials/header";
+@import "../partials/home";
+@import "overrides";

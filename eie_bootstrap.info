@@ -3,19 +3,18 @@ description = The EIE theme, rebuilt from the ground up with Bootstrap.
 core = 7.x
 screenshot = screenshot.png
 
-stylesheets[all][] = css/normalize.css
-stylesheets[all][] = css/main.css
+stylesheets[all][] = dist/css/eie_bootstrap.css
 
-scripts[] = js/vendor/modernizr.js
-scripts[] = js/vendor/enquire.js
-scripts[] = js/vendor/viewport.min.js
-scripts[] = js/responsive-tables.js
-scripts[] = js/vendor/tablesaw.stackonly.js
-scripts[] = js/vendor/tables-init.js
-scripts[] = js/main.js
-scripts[] = js/hero-video.js
-scripts[] = js/animate.js
-scripts[] = js/smooth-scroll-hash-navigation.js
+scripts[] = dist/js/vendor/modernizr.js
+scripts[] = dist/js/vendor/enquire.js
+scripts[] = dist/js/vendor/viewport.min.js
+scripts[] = dist/js/responsive-tables.js
+scripts[] = dist/js/vendor/tablesaw.stackonly.js
+scripts[] = dist/js/vendor/tables-init.js
+scripts[] = dist/js/main.js
+scripts[] = dist/js/hero-video.js
+scripts[] = dist/js/animate.js
+scripts[] = dist/js/smooth-scroll-hash-navigation.js
 
 regions[header_top] = Header Top
 regions[header_utility] = Header Utility
@@ -23,7 +22,6 @@ regions[header_middle] = Header Middle
 regions[header_main_menu] = Header Main Menu
 regions[header_bottom] = Header Bottom
 
-regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
@@ -40,10 +38,6 @@ regions[front_testimonial] = Front Testimonial
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
 
-regions[triptych_first] = Triptych first
-regions[triptych_middle] = Triptych middle
-regions[triptych_last] = Triptych last
-
 regions[footer_firstcolumn] = Footer first column
 regions[footer_secondcolumn] = Footer second column
 regions[footer_thirdcolumn] = Footer third column
@@ -53,27 +47,13 @@ regions[footer] = Footer
 regions[footer_row_1] = Footer Row 1
 regions[footer_row_2] = Footer Row 2
 
-regions[about_eie_column_1] = About EIE Column 1
-regions[about_eie_column_2] = About EIE Column 2
-regions[about_eie_column_3] = About EIE Column 3
-regions[curric_products_column_1] = Curriculum Products Column 1
-regions[curric_products_column_2] = Curriculum Products Column 2
-regions[curric_products_column_3] = Curriculum Products Column 3
-regions[prof_dev_column_1] = Professional Development Column 1
-regions[prof_dev_column_2] = Professional Development Column 2
-regions[video_library_column_1] = Video Library Column 1
-regions[video_library_column_2] = Video Library Column 2
-regions[video_library_column_3] = Video Library Column 3
-regions[research_column_1] = Research Column 1
-
 =======
 
 ;Overrides to core and contrib
-stylesheets[all][] = css/system.theme.css
-stylesheets[all][] = css/system.menus.css
-stylesheets[all][] = css/system.messages.css
-stylesheets[all][] = css/jquery.ui.theme.css
-stylesheets[all][] = css/views.css
-stylesheets[all][] = css/field_collection.theme.css
-stylesheets[all][] = css/overrides.css
-stylesheets[all][] = css/bootstrap/bootstrap.css
+stylesheets[all][] = dist/css/system.theme.css
+stylesheets[all][] = dist/css/system.menus.css
+stylesheets[all][] = dist/css/system.messages.css
+stylesheets[all][] = dist/css/jquery.ui.theme.css
+stylesheets[all][] = dist/css/views.css
+stylesheets[all][] = dist/css/field_collection.theme.css
+stylesheets[all][] = dist/css/custom.css

@@ -45,7 +45,7 @@
  */
 ?>
 <div class="row search-container">
-  <div class="small-12 columns">
+  <div class="col-sm-12">
     <div class="persistent-search">
       <a class="search-toggle fa fa-search">Search</a>
       <?php print $content ?>

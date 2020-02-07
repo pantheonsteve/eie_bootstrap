@@ -44,8 +44,8 @@
  * @ingroup themeable
  */
 ?>
-      <div class="row">
-        <div class="small-12 columns">
-          <?php print $content ?>
-        </div>
-      </div>
+<div class="row">
+    <div class="col-sm-12">
+      <?php print $content ?>
+    </div>
+</div>

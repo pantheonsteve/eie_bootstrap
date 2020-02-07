@@ -29,7 +29,9 @@
  */
 ?>
 <?php if ($content): ?>
-  <div class="utility-menu hide-on-mobile">
-  <?php print $content; ?>
-</div>
+  <div class="col-12">
+    <div class="utility-menu hide-on-mobile">
+      <?php print $content; ?>
+    </div>
+  </div>
 <?php endif; ?>

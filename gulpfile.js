@@ -13,8 +13,26 @@ gulp.task('sass', function () {
 
 // Watch source files for changes and compile them.
 gulp.task('watch', function () {
-  gulp.watch('./build/scss/**/*.scss', ['sass']);
+  gulp.watch('./build/scss/*.scss', ['sass']);
+});
+
+// Copy required libraries to our dist files
+gulp.task('copy', function () {
+  gulp.src([
+    'node_modules/bootstrap/dist/js/*'
+  ]).pipe($.copy('dist/js', {prefix: 4}))
+    .pipe(gulp.dest('./dist'));
+
+  gulp.src([
+    'node_modules/tether/dist/js/*'
+  ]).pipe($.copy('dist/js', {prefix: 4}))
+    .pipe(gulp.dest('./dist'));
+
+  gulp.src([
+    'node_modules/jquery/dist/jquery.min.js'
+  ]).pipe($.copy('dist/js', {prefix: 3}))
+    .pipe(gulp.dest('./dist'));
 });
 
 // Default task
-gulp.task('default', ['watch']);
+gulp.task('default', gulp.series('watch'));
